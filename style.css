@@ -1,0 +1,149 @@
+body{
+    margin: 0;/*border lo unna text left ki border ki daggaraga vasthundi*/
+}
+
+#bg{
+   position: relative;
+   background: linear-gradient(red, blue);/*background color 2 vachay*/
+   height: 100vh;
+   overflow: hidden;/*scrollbar pothundi*/
+}
+#bg h1{
+    position: absolute;/* text bold avuthundi*/
+    top: 50%;/*kindiki 50%(madyalo) varaku vasthundi*/
+    left: 50%;/*left nunchi 50% madylo*/
+    transform: translate(-50%, -50%);
+
+    margin: 0;/*text painiki border daggariki vasthundi*/
+    text-transform: uppercase;
+    font-size: 72px;/*text peddaga avuthundi*/
+    color: rgb(43, 255, 0);
+    z-index: 1;/* box paina text vasthadi*/
+
+
+}
+
+#bg ul li {
+    position: absolute;/*absolute thiskokapothe box niluvuga7 vasthay*/
+    border: 1px solid #776666;
+    width: 30px;
+    height: 30px;/* po+brd+wid+hei=box vasthundi*/
+    list-style: none;/*.... pothundi*/
+    background-color: white;
+
+}
+#square li {
+    top: 50vh;/*50% kindiki vasthadi*/
+    left: 50vw;
+    animation: square 6s linear infinite;
+    opacity: 0;
+}
+#square li:nth-child(2) {
+    top: 10vh;/*50% kindiki vasthadi*/
+    left: 10vw;
+    animation-delay: 2s;
+}
+#square li:nth-child(3) {
+    top: 13vh;
+    left: 60vw;
+    animation-delay: 3s;
+}
+#square li:nth-child(4) {
+    top: 16vh;
+    left: 80vw;
+    animation-delay: 6s;
+}
+#square li:nth-child(5) {/*left+kinda(nairuthi)*/
+    top: 80vh;
+    left: 10vw;
+    /*ex====top=80vh  left=0= down+middle lo vasthadi */
+    animation-delay: 1s;
+}
+#square li:nth-child(6) {
+    top: 80vh;
+    left: 60vw;
+    animation-delay: 5s;
+}
+#square li:nth-child(7) {/*right+down(aagneyam)*/
+    top: 80vh;
+    left: 90vw;
+    animation-delay: 3s;
+}
+
+#circle li{
+    border-radius: 50%;
+    bottom: 0;
+    animation: circle 6s linear infinite;
+    opacity: 0;/* kinda circlies kanapadavu */
+}
+#circle li:nth-child(2){
+    left: 20vw;
+    animation-delay: 1s;
+}
+#circle li:nth-child(3){
+    left: 32vw;
+    animation-delay: 5s;
+}
+#circle li:nth-child(4){
+    left: 46vw;
+    animation-delay: 3s;
+}
+#circle li:nth-child(5){
+    left: 60vw;
+    animation-delay: 2s;
+}
+#circle li:nth-child(6){
+    left: 76vw;
+    animation-delay: 6s;
+}
+#circle li:nth-child(7){
+    left: 90vw;
+    animation-delay: 4s;
+}
+
+
+
+
+
+
+
+
+@keyframes square { /*blinking ravalante=animation: square 6s linear; @keyframes*/
+    0%  {
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5) rotateY(1000deg);/* peddaga avuthundi*/
+        /* transform: scale(1);= small pedaga avuthundi */
+        /* transform: scale(2); */
+        /* transform: scale(10); big big */
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        bottom: 0;
+        border-radius: 0;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5) rotate(1000deg);
+        bottom: 90vh;
+        border-radius: 50%;
+        opacity: 0;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
